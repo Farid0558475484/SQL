@@ -1,0 +1,30 @@
+CREATE DATABASE TEST
+USE TEST
+CREATE TABLE P999(
+    Id int primary key identity,
+    Fulname nvarchar(255) not null,
+    Age int CHECK(Age>=0) not null,
+    Salary Int CHECK(SALARY>300 AND SALARY<2000) not null,
+    Email nvarchar(50)unique,
+)
+
+UPDATE P999
+SET Salary = 1900
+WHERE Id = 1
+
+
+SELECT * FROM P999
+
+INSERT INTO P999 (Fulname,Age,Salary,Email)
+VALUES
+('FARID',25,1500,'asalam123@mail.ru'),
+('Hacvsdzade',15,499,'farid999@gmail.ru'),
+('SALAM',35,955,'myauu@mwail.ru'),
+('EKNYR',44,1999,'aggdfwefssdf@mail.ru'),
+('Havse',99,523,'qwerty@mail.ru')
+
+
+
+DROP TABLE P999
+
+
